@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ result[0][2] }} - {{ result[0][1] }} | 보컬로이드">
+    <meta property="og:description" content="{{ result[0][4] }}">
+    <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Vocaloid_logo.svg/828px-Vocaloid_logo.svg.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocaloid Community</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<style>
+    @font-face {
+    font-family: 'SpoqaHanSansNeo-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+        body{
+            font-family: SpoqaHanSansNeo-Regular, Meiryo;
+            font-weight: bold;
+        }
+
+        #kashi{
+            white-space: pre;
+            border-color: DodgerBlue; 
+            background-color:rgba(30, 144, 255, 0.2);
+            border-style: solid; 
+            border-width: 0 0 0 8px; 
+            padding: 12px; 
+            word-break: break-all;
+
+        }
+
+        #nico{
+            border-color: Tomato; 
+            background-color:rgba(255, 99, 71, 0.2);
+            border-style: solid; 
+            border-width: 0 0 0 8px; 
+            padding: 12px; 
+            word-break: break-all;
+
+        }
+
+
+        .up{
+            background-color: rgba(28, 149, 224, 0.096);
+            height: 60px;
+        }
+        .up2{
+            border-right:1px solid rgba(28, 149, 224, 0.096);
+            width: 150px;
+            background-color: rgba(28, 149, 224, 0.096);
+            height: 60px;
+            position: relative;
+            top: px;
+            left: 0px;
+            font-size: 20px;
+            line-height: 60px;
+            text-align: center;
+
+
+        }
+        .up21{
+            color: black;
+            text-decoration: none
+        }
+        .up21:hover{
+            color: black;
+        }
+        .up2:hover{
+            background-color: rgba(28, 149, 224, 0.096);
+        }
+
+        #name{
+            position: relative;
+            top: 50%;
+            left: 0%;
+            width: 140px;
+        }
+
+        #title{
+            position: relative;
+            top: 50%;
+            left: 10%;
+            width: 540px;
+        }
+
+        #data{
+            position: relative;
+            top: 70%;
+            left: 15%;
+            width: 740px;
+            height: 500px;
+            text-align: left;
+            word-wrap:break-word;
+        }
+</style>
+<body>
+    <div class="up">
+
+        <h1 class="up2"><a class="up21" href="./main.html">Vocaloid</a></h1>
+    </div>
+
+    <h1 class="text-center"><br><a href="./main.html" style="text-decoration:none">Vocaloid</a></h1>
+<br><br>
+    <div class="container">
+        <div>니코동 : {{ sm }}</div><br>
+        <div>제목 : {{ result[0][1] }} ({{ result[0][2] }})</div><br><br><br>
+        <div id="nico"><iframe src="https://embed.nicovideo.jp/watch/{{ sm }}?jsapi=1&amp;playerId=1" scrolling="0" frameborder="0" allowfullscreen=""></iframe></div><br>
+        <h4>가사</h4><h6>출처 : <a href="http://vocaro.wikidot.com/" style="text-decoration-line: none;">보카로 가사 위키</a></h6><div id="kashi">{{ result[0][5] }}</div><br><br><br>
+        <div id="disqus_thread"></div>
+    </div>
+
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://vocaloidsite.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</body>
+</html>
