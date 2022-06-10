@@ -1,10 +1,8 @@
 from flask import Flask, render_template, request, redirect
 import sqlite3
-from random import *
 from flask import request
 import os
 import glob
-import random
 
 db = sqlite3.connect("db.db",check_same_thread=False)
 cur = db.cursor()
