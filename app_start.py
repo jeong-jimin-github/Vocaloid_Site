@@ -22,11 +22,6 @@ def index():
 
 
 
-@app.route('/use')
-def use():
-    return render_template("use.html")
-
-
 @app.route('/look/<articleID>/')
 def board_content(articleID):
     UserID = articleID
@@ -45,5 +40,5 @@ def page_not_found(error):
 
 
 if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host='0.0.0.0', port=port)
+    port = int(os.environ.get("PORT", 443))
+    app.run(host='0.0.0.0', port=port, ssl_context=('/etc/letsencrypt/live/kuuhaku.xyz/fullchain.pem', '/etc/letsencrypt/live/kuuhaku.xyz/privkey.pem'))
