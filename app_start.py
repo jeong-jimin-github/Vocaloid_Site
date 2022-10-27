@@ -40,6 +40,6 @@ def page_not_found(error):
 if __name__ == '__main__':
   #  port = int(os.environ.get("PORT", 443))
   #  app.run(host='0.0.0.0', port=port, ssl_context=('/etc/letsencrypt/live/kuuhaku.xyz/fullchain.pem', '/etc/letsencrypt/live/kuuhaku.xyz/privkey.pem'))
-    port = int(os.environ.get("PORT", 80))
+    port = int(os.environ.get("PORT", 8080))
     app.run(host='0.0.0.0', port=port)
     
